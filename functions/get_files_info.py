@@ -11,7 +11,8 @@ def get_files_info(working_directory, directory="."):
             return f'Error: "{full_path}" is not a valid path'
         if os.path.isdir(full_path) == False: 
             return f'Error: "{directory}" is not a directory'
-        
+
+        return f'- {full_path}: file_size={os.path.getsize(full_path)} bytes, is_dir={os.path.isdir}'
 
     except TypeError as e: 
         return f'Error: {e}'
