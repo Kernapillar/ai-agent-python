@@ -12,7 +12,7 @@ def get_files_info(working_directory, directory="."):
         if os.path.isdir(full_path) == False: 
             return f'Error: "{directory}" is not a directory'
 
-        return f'- {full_path}: file_size={os.path.getsize(full_path)} bytes, is_dir={os.path.isdir}'
+        return f'- {full_path}: file_size={os.path.getsize(full_path)} bytes, is_dir={os.path.isdir(full_path)}'
 
     except TypeError as e: 
         return f'Error: {e}'
