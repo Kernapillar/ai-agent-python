@@ -1,11 +1,10 @@
 # python
 import os
-from functions.get_file_contents import get_file_content
+from functions.write_file import write_file
 
-print(get_file_content("calculator", "main.py"))
+print(write_file("calculator", "lorem.txt", "wait, this isn't lorem ipsum"))
 
-print(get_file_content("calculator", "pkg/calculator.py"))
+print(write_file("calculator", "pkg/morelorem.txt", "lorem ipsum dolor sit amet"))
 
-print(get_file_content("calculator", "/bin/cat"))
+print(write_file("calculator", "/tmp/temp.txt", "this should not be allowed"))
 
-print(get_file_content("calculator", "pkg/does_not_exist.py"))
